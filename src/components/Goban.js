@@ -318,8 +318,8 @@ class Goban extends Component {
 
                 heatMap[y][x] = {
                     strength,
-                    text: visits < 10 ? '' : [
-                        win + (Math.floor(win) === win ? '%' : ''),
+                    text: visits < 2 ? '' : [
+                        Math.floor(win) + '%',
                         visits < 1000 ? visits : Math.round(visits / 100) / 10 + 'k'
                     ].join('\n')
                 }
